@@ -43,7 +43,12 @@ onMounted(async () => {
   <section class="h-fit w-full flex justify-center items-center flex-col">
     <div class="h-fit flex flex-col justify-center items-center p-10">
       <ul class="w-full h-full grid grid-cols-4 gap-3" v-if="!isLoadingFirst">
-        <Card v-for="item in shops" :city="item.state" :name="item.name" />
+        <Card
+          v-for="item in shops"
+          :city="item.state"
+          :name="item.name"
+          :url="item.id"
+        />
       </ul>
     </div>
     <button

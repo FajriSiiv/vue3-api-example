@@ -15,3 +15,13 @@ export const getData = async (count = 10) => {
     throw error;
   }
 };
+
+export const getDataById = async (id) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching random users:", error);
+    throw error;
+  }
+};
